@@ -2,11 +2,17 @@
  * Created by hensleym on 1/13/16.
  */
 angular.module('myApp.controllers')
-    .controller('ContactMeCtrl', ['$scope', '$modal', 'navService', function($scope, $modal, navService) {
+    .controller('ContactMeCtrl', ['$scope', '$modal', 'navService', function($scope, $modal, navService, ) {
         navService.setActiveTab("contactme");
+
 
         $scope.contactinfo = {
             FirstName: ''
+            LastName: ''
+            PhoneNumber: ''
+            Email: ''
+            Address: ''
+
         };
         $scope.contactMe = function(widget){
             var modalInstance = $modal.open({
